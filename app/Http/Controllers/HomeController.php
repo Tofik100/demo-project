@@ -86,7 +86,7 @@ class HomeController extends Controller
         }
         $userData->save();
 
-        return redirect('/home')->with(['message'=> 'Customer Task Approved!']);
+        return redirect('/home',[$id])->with(['message'=> 'Customer Task Approved!']);
     }
 
 

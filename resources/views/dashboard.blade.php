@@ -18,7 +18,7 @@
                 </div>
             @endif
     
-            <form method="POST" action="{{ route('mytask') }}">
+            <form method="POST" action="{{ route('task',[$id ?? '']) }}">
                 @csrf  
 
                 @method('POST')

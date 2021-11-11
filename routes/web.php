@@ -23,10 +23,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     // Route::post('task', [TaskController::class,'addTask'])->name('task');
 })->name('dashboard');
 
-Route::get('task/{id}', [HomeController::class,'TaskStatus'])->name('task/{id}');
+
 Route::post('task', [TaskController::class,'addTask'])->name('task');
 Route::get('task/{id}', [TaskController::class,'userTask'])->name('task');
-
+Route::put('task/{id}', [HomeController::class,'TaskStatus'])->name('task/{id}');
 Route::get('showTask', [TaskController::class,'showTask'])->name('showTask');
 
 
